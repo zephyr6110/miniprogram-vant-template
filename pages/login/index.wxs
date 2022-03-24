@@ -1,0 +1,10 @@
+function isMobileExist(mobile) {
+  /* prettier-ignore */
+  var regexp = getRegExp("^1[3456789]\d{9}$");
+
+  return regexp.test(mobile);
+}
+
+module.exports = {
+  isMobileExist: isMobileExist
+};

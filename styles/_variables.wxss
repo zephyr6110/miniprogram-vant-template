@@ -1,0 +1,35 @@
+page {
+  --white: #fff;
+  --black: #000;
+  --black-1: #1e1e1e;
+  --gray: #889090;
+  --gray-1: #f1f1f1;
+  --gray-2: #f2f3f5;
+  --gray-3: #ebedf0;
+  --gray-4: #dcdee0;
+  --gray-5: #c6c6c6;
+  --gray-6: #989090;
+  --gray-7: #646566;
+  --gray-8: #323233;
+  --red: #ff505e;
+  --orange: #ff7d56;
+
+  --text-color: var(--black-1);
+  --active-color: var(--gray-2);
+  --active-opacity: 0.7;
+  --disabled-opacity: 0.5;
+  --background-color: var(--gray-1);
+  --background-color-light: #fafafa;
+  --text-link-color: #576b95;
+  --cell-active-color: var(--gray-5);
+
+  --dialog-border-radius: 22rpx;
+  --dialog-width: 500rpx;
+  --overlay-background-color: rgba(0, 0, 0, 0.36);
+  --tabs-line-height: 90rpx;
+  --field-label-color: var(--black-1);
+  --popup-round-border-radius: 32rpx;
+
+  --gradient-red: linear-gradient(90deg, var(--red), var(--orange));
+  --gradient-white: linear-gradient(90deg, var(--white), var(--background-color));
+}

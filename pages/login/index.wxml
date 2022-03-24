@@ -1,0 +1,48 @@
+<!--pages/login/index.wxml-->
+<wxs src="./index.wxs" module="computed" />
+
+<view class="container">
+  <view class="main-content">
+    <form class="login-form">
+      <field
+        class="form-item"
+        custom-class="form-item-inner"
+        model:value="{{ mobile }}"
+        type="number"
+        label="+86"
+        placeholder="请输入手机号"
+        title-width="60rpx"
+      ></field>
+      <field
+        class="form-item"
+        custom-class="form-item-inner"
+        model:value="{{ code }}"
+        center
+        clearable
+        placeholder="输入验证码"
+        use-button-slot
+      >
+        <button
+          class="mini-btn send-code-btn"
+          slot="button"
+          disabled="{{ timer > 0}}"
+          bind:tap="sendCode"
+        >
+          {{ sendBtnText }}
+        </button>
+      </field>
+
+      <view class="btn-wrap">
+        <button
+          class="submit-btn"
+          type="primary"
+          loading="{{ isSubmitLoading }}"
+          disabled="{{ isSubmitLoading || !computed.isMobileExist(mobile)  }}"
+          bind:tap="onSubmitBtnTap"
+        >
+          登录
+        </button>
+      </view>
+    </form>
+  </view>
+</view>
